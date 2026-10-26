@@ -1,0 +1,219 @@
+.hero {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h1 span {
+    background: linear-gradient(to right, #E4B5A5, #D54C5C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-dark);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Все три карточки встанут в одну линию */
+    }
+}
+
+@media (max-width: 350px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* Все три карточки встанут в одну линию */
+    }
+}
+
+.footer__contact{
+     font-size: 1.125rem;
+     color: var(--accent);
+
+}
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #313846;
+}
+
+.card h3 {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Steps Section */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.step-num {
+    width: 50px;
+    height: 50px;
+    background-color: var(--border);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 auto 20px auto;
+    color: var(--accent);
+}
+
+.img {
+    width:39.5rem;
+    height: fit-content;
+}
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #11141b 100%);
+    border-top: 1px solid var(--border);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cta-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cta-form input[type="email"] {
+    flex: 1;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: var(--text-main);
+    outline: none;
+}
+
+.cta-form input[type="email"]:focus {
+    border-color: var(--accent);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.modal-content p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .steps-container { flex-direction: column; gap: 30px; }
+    .cta-form { flex-direction: column; }
+}
