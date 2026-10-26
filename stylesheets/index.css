@@ -131,6 +131,20 @@
     height: fit-content;
 }
 
+@media (max-width: 768px) {
+    .img {
+        width: 15.625rem;
+            height: fit-content;
+
+    }
+}
+
+@media (max-width: 350px) {
+    .img {
+        display: none;
+    }
+}
+
 .cta-section {
     text-align: center;
     background: linear-gradient(180deg, var(--bg-dark) 0%, #11141b 100%);
